@@ -1,7 +1,7 @@
 /**
  * Functions to micro:bit Gun by ELECFREAKS Co.,Ltd.
  */
-//%weight=5 color=#ff0000 icon="\uf753" block="Gunkit"
+//%weight=5 color=#ff0000 icon="\uf753"
 namespace gunKit {
     const board_address = 0x10
 
