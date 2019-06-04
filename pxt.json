@@ -1,0 +1,15 @@
+{
+    "name": "micro:bit Gun",
+    "version": "0.0.1",
+    "description": "micro:bit gun by ELECFREAKS Apply to infrared laser battle gun toy series",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "neopixel": "github:microsoft/pxt-neopixel"
+    },
+    "files": [
+		"main.ts",
+        "README.md"
+    ],
+    "public": true
+}
