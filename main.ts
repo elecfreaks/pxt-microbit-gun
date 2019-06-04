@@ -1,8 +1,8 @@
 /**
  * Functions to micro:bit Gun by ELECFREAKS Co.,Ltd.
  */
-//% color=#ff0000  icon="\uf753" block="Gunkit"
-namespace Gunkit {
+//%weight=5 color=#ff0000 icon="\uf753" block="Gunkit"
+namespace gunKit {
     const board_address = 0x10
 
     export enum lightMode {
