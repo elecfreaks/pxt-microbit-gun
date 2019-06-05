@@ -42,7 +42,7 @@ namespace gunKit {
         //% block="white" enumval=3
         white
     }
-    function Blue_zero() {
+    function blue_zero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -106,7 +106,7 @@ namespace gunKit {
         pins.analogSetPeriod(send_pin, 0)
         control.waitMicros(140)
         pins.analogSetPeriod(send_pin, 26)
-        control.waitMicros(660)
+        control.waitMicros(700)
         // 00
         pins.analogSetPeriod(send_pin, 0)
         control.waitMicros(140)
@@ -134,7 +134,7 @@ namespace gunKit {
         control.waitMicros(330)
         // 00
         pins.analogSetPeriod(send_pin, 0)
-        control.waitMicros(200)
+        control.waitMicros(140)
         pins.analogSetPeriod(send_pin, 26)
         control.waitMicros(330)
         // 01
@@ -144,9 +144,9 @@ namespace gunKit {
         control.waitMicros(660)
         // 10
         pins.analogSetPeriod(send_pin, 0)
-        control.waitMicros(600)
+        control.waitMicros(520)
         pins.analogSetPeriod(send_pin, 26)
-        control.waitMicros(280)
+        control.waitMicros(330)
         pins.analogSetPeriod(send_pin, 0)
     }
     export function blue_one() {
@@ -251,12 +251,1117 @@ namespace gunKit {
         control.waitMicros(660)
         // 11
         pins.analogSetPeriod(send_pin, 0)
-        control.waitMicros(580)
+        control.waitMicros(560)
         pins.analogSetPeriod(send_pin, 26)
         control.waitMicros(650)
         pins.analogSetPeriod(send_pin, 0)
     }
+    export function blue_two() {
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(660)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(650)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(200)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function red_zero() {
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
 
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(580)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function red_one() {
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(580)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(580)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(580)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function red_two() {
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(580)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(660)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function green_zero() {
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function green_one(){
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(660)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function green_two(){
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function white_zero(){
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function white_one(){
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+        pins.analogSetPeriod(send_pin, 0)
+    }
+    export function white_two(){
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(500)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(700)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(120)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(520)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(680)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        pins.analogSetPeriod(send_pin, 0)
+    }
 
 
     //% block="set IR recive pin to %pin"
@@ -326,14 +1431,6 @@ namespace gunKit {
         pins.setPull(pin, PinPullMode.PullUp)
     }
 
-
-    //% subcategory=Bullet
-    //% weight=88
-    //% block="set bullet type to %type"
-    export function set_bullet_type(type: Bullet_type): void {
-        bullet_type = type
-        basic.pause(200)
-    }
     //% subcategory=Bullet
     //% weight=91
     //% block="change bullet button is pressed"
@@ -356,6 +1453,13 @@ namespace gunKit {
             return false
         }
     }
+    //% subcategory=Bullet
+    //% weight=88
+    //% block="set bullet type to %type"
+    export function set_bullet_type(type: Bullet_type): void {
+        bullet_type = type
+        basic.pause(200)
+    }
 
     //% subcategory=Team
     //% weight=89
@@ -370,7 +1474,7 @@ namespace gunKit {
     }
     //% subcategory=Team
     //% weight=88
-    //% block="change team id to %id"
+    //% block="set team id to %id"
     export function set_team_id(id: Team_id): void {
         team_id = id
         basic.pause(200)
@@ -428,52 +1532,52 @@ namespace gunKit {
 
     //% subcategory=Fire
     //% weight=78
-    //% block="Open fire"
+    //% block="open fire"
     export function fire(): void {
         conflict_flag == false
         switch (team_id) {
             case 0:
                 if (bullet_type == 0) {
-                    blue_one()
+                    blue_zero()
                 }
                 else if (bullet_type == 1) {
-
+                    blue_one()
                 }
                 else if (bullet_type == 2) {
-
+                    blue_two()
                 }
                 break;
             case 1:
                 if (bullet_type == 0) {
-
+                    red_zero()
                 }
                 else if (bullet_type == 1) {
-
+                    red_one()
                 }
                 else if (bullet_type == 2) {
-
+                    red_two()
                 }
                 break;
             case 2:
                 if (bullet_type == 0) {
-
+                    green_zero()
                 }
                 else if (bullet_type == 1) {
-
+                    green_one()
                 }
                 else if (bullet_type == 2) {
-
+                    green_two()
                 }
                 break;
             case 3:
                 if (bullet_type == 0) {
-
+                    white_zero()
                 }
                 else if (bullet_type == 1) {
-
+                    white_one()
                 }
                 else if (bullet_type == 2) {
-
+                    white_two()
                 }
                 break;
             default:
