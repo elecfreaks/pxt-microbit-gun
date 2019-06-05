@@ -1,7 +1,7 @@
 /**
  * Functions to micro:bit Gun by ELECFREAKS Co.,Ltd.
  */
-//% weight=5 color=#ff0000 icon="\uf1e2" block="GunKit"
+//% weight=5 color=#000000 icon="\uf1e2" block="GunKit"
 
 namespace gunKit {
 
@@ -14,7 +14,10 @@ namespace gunKit {
     let bullet_type = 0
     let Vibration_pin = DigitalPin.P0
     let send_pin = AnalogPin.P0
-    let recive_pin = AnalogPin.P0
+    let recive_pin = DigitalPin.P0
+    const EVENT_ID = 100
+    const EVENT_Value = 200
+    let conflict_flag = true
 
     export enum Bullet_type {
         //% block="pistol cartridge" enumval=0
@@ -39,14 +42,7 @@ namespace gunKit {
         //% block="white" enumval=3
         white
     }
-    export enum Fire_type{
-        //% block="Once" enumval=0
-        Once,
-
-        //% block="Continuity" enumval=1
-        continuity
-    }
-    function Blue_zero(){
+    function Blue_zero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -153,6 +149,113 @@ namespace gunKit {
         control.waitMicros(280)
         pins.analogSetPeriod(send_pin, 0)
     }
+    export function blue_one() {
+        pins.analogWritePin(send_pin, 512)
+        // 头
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(1550)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(660)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 10
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(550)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 00
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(200)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(330)
+        // 01
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(140)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(660)
+        // 11
+        pins.analogSetPeriod(send_pin, 0)
+        control.waitMicros(580)
+        pins.analogSetPeriod(send_pin, 26)
+        control.waitMicros(650)
+        pins.analogSetPeriod(send_pin, 0)
+    }
 
 
 
@@ -161,8 +264,10 @@ namespace gunKit {
     //% weight=98
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_recive_pin(pin: AnalogPin): void {
+    export function set_recive_pin(pin: DigitalPin): void {
         recive_pin = pin
+        pins.setPull(recive_pin, PinPullMode.PullUp)
+
     }
 
     //% block="set IR send pin to %pin"
@@ -220,7 +325,7 @@ namespace gunKit {
         Vibration_pin = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
-    
+
 
     //% subcategory=Bullet
     //% weight=88
@@ -231,12 +336,12 @@ namespace gunKit {
     }
     //% subcategory=Bullet
     //% weight=91
-    //% block="bullet button is pressed"
-    export function check_bullet_button() :boolean {
+    //% block="change bullet button is pressed"
+    export function check_bullet_button(): boolean {
         if (pins.digitalReadPin(bullet_button) == 0) {
             return true
         }
-        else{
+        else {
             return false
         }
     }
@@ -282,65 +387,100 @@ namespace gunKit {
             return false
         }
     }
+    /**
+     * TODO: Set the time to vibration 
+     * @param ms vibration time, eg: 200
+     */
     //% subcategory=Fire
-    //% weight=78
-    //% block="Open fire in %type mode"
-    export function fire(type: Fire_type): void {
-        if (type == 0) {
-            switch(team_id){
-                case 0:
-                    if (bullet_type == 0) {
-                        Blue_zero()
-                    }
-                    else if(bullet_type == 1){
-
-                    }
-                    else if(bullet_type == 2){
-
-                    }
-                    break;
-                case 1:
-                    if (bullet_type == 0) {
-
-                    }
-                    else if (bullet_type == 1) {
-
-                    }
-                    else if (bullet_type == 2) {
-
-                    }
-                    break;
-                case 2:
-                    if (bullet_type == 0) {
-
-                    }
-                    else if (bullet_type == 1) {
-
-                    }
-                    else if (bullet_type == 2) {
-
-                    }
-                    break;
-                case 3:
-                    if (bullet_type == 0) {
-
-                    }
-                    else if (bullet_type == 1) {
-
-                    }
-                    else if (bullet_type == 2) {
-
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-        else{
-    
-        }
- 
+    //% weight=75
+    //% block="vibration for %ms"
+    export function set_vibration(ms: number): void {
+        pins.digitalWritePin(Vibration_pin, 1)
+        basic.pause(ms)
+        pins.digitalWritePin(Vibration_pin, 0)
+    }
+    //% subcategory=Hit
+    //% weight=59
+    //% block="Init health variable to %x=variables_get(Health)"
+    export function init_health(x: number): void {
+        //do nothing
     }
 
-    
+    //% subcategory=Hit
+    //% weight=59
+    //% block="on Hit"
+    export function onHit(handler: () => void) {
+        init_hit()
+        control.onEvent(EVENT_ID, EVENT_Value, handler);
+    }
+    export function init_hit() {
+        control.inBackground(function () {
+            while (conflict_flag) {
+                if (pins.digitalReadPin(recive_pin) == 0) {
+                    control.raiseEvent(EVENT_ID, EVENT_Value)
+                }
+                else {
+                }
+                basic.pause(10)
+            }
+        })
+    }
+
+    //% subcategory=Fire
+    //% weight=78
+    //% block="Open fire"
+    export function fire(): void {
+        conflict_flag == false
+        switch (team_id) {
+            case 0:
+                if (bullet_type == 0) {
+                    blue_one()
+                }
+                else if (bullet_type == 1) {
+
+                }
+                else if (bullet_type == 2) {
+
+                }
+                break;
+            case 1:
+                if (bullet_type == 0) {
+
+                }
+                else if (bullet_type == 1) {
+
+                }
+                else if (bullet_type == 2) {
+
+                }
+                break;
+            case 2:
+                if (bullet_type == 0) {
+
+                }
+                else if (bullet_type == 1) {
+
+                }
+                else if (bullet_type == 2) {
+
+                }
+                break;
+            case 3:
+                if (bullet_type == 0) {
+
+                }
+                else if (bullet_type == 1) {
+
+                }
+                else if (bullet_type == 2) {
+
+                }
+                break;
+            default:
+                break;
+        }
+        basic.pause(50)
+        conflict_flag == true
+    }
+
 }
