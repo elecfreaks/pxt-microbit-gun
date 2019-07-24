@@ -5,8 +5,7 @@
 
 namespace gunKit {
 
-
-    let fire_button = DigitalPin.P0
+    let openFire_button = DigitalPin.P0
     let load_button = DigitalPin.P0
     let team_button = DigitalPin.P0
     let team_id = 0
@@ -19,17 +18,17 @@ namespace gunKit {
     const EVENT_Value = 200
     let conflict_flag = true
 
-    export enum Bullet_type {
-        //% block="pistol cartridge" enumval=0
-        pistol_cartridge,
+    export enum BulletType {
+        //% block="Pistol Cartridge" enumval=0
+        PistolCartridge,
 
         //% block="Triple Tap" enumval=1
-        Triple_Tap,
+        TripleTap,
 
-        //% block="Rocket gun" enumval=2
-        Rocket_gun
+        //% block="Rocket Gun" enumval=2
+        RocketGun
     }
-    export enum Team_id {
+    export enum TeamId {
         //% block="Blue" enumval=0
         Blue,
 
@@ -39,10 +38,10 @@ namespace gunKit {
         //% block="Green" enumval=2
         Green,
 
-        //% block="white" enumval=3
-        white
+        //% block="White" enumval=3
+        White
     }
-    function blue_zero() {
+    export function blueZero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -149,7 +148,7 @@ namespace gunKit {
         control.waitMicros(330)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function blue_one() {
+    export function blueOne() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -256,7 +255,7 @@ namespace gunKit {
         control.waitMicros(650)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function blue_two() {
+    export function blueTwo() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -363,7 +362,7 @@ namespace gunKit {
         control.waitMicros(330)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function red_zero() {
+    export function redZero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -474,7 +473,7 @@ namespace gunKit {
         control.waitMicros(680)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function red_one() {
+    export function redOne() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -585,7 +584,7 @@ namespace gunKit {
         control.waitMicros(330)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function red_two() {
+    export function redTwo() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -696,7 +695,7 @@ namespace gunKit {
         control.waitMicros(660)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function green_zero() {
+    export function greenZero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -807,7 +806,7 @@ namespace gunKit {
         control.waitMicros(330)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function green_one(){
+    export function greenOne() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -918,7 +917,7 @@ namespace gunKit {
         control.waitMicros(660)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function green_two(){
+    export function greenTwo() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1029,7 +1028,7 @@ namespace gunKit {
         control.waitMicros(680)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function white_zero(){
+    export function whiteZero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1140,7 +1139,7 @@ namespace gunKit {
         control.waitMicros(700)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function white_one(){
+    export function whiteOne() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1251,7 +1250,7 @@ namespace gunKit {
         control.waitMicros(680)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function white_two(){
+    export function whiteTwo() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1369,7 +1368,7 @@ namespace gunKit {
     //% weight=98
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_recive_pin(pin: DigitalPin): void {
+    export function setRecivePin(pin: DigitalPin): void {
         recive_pin = pin
         pins.setPull(recive_pin, PinPullMode.PullUp)
 
@@ -1380,17 +1379,17 @@ namespace gunKit {
     //% weight=97
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_send_pin(pin: AnalogPin): void {
+    export function setSendPin(pin: AnalogPin): void {
         send_pin = pin
     }
 
-    //% block="set fire button to %pin"
+    //% block="set openFire button to %pin"
     //% subcategory=Init
     //% weight=96
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_fire_button(pin: DigitalPin): void {
-        fire_button = pin
+    export function setFireButton(pin: DigitalPin): void {
+        openFire_button = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
 
@@ -1399,7 +1398,7 @@ namespace gunKit {
     //% weight=95
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_load_button(pin: DigitalPin): void {
+    export function setLoadButton(pin: DigitalPin): void {
         load_button = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
@@ -1408,7 +1407,7 @@ namespace gunKit {
     //% weight=94
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_bullet_button(pin: DigitalPin): void {
+    export function setBulletButton(pin: DigitalPin): void {
         bullet_button = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
@@ -1417,7 +1416,7 @@ namespace gunKit {
     //% weight=93
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_team_button(pin: DigitalPin): void {
+    export function setTeamButton(pin: DigitalPin): void {
         team_button = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
@@ -1426,7 +1425,7 @@ namespace gunKit {
     //% weight=92
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
-    export function set_vibration_pin(pin: DigitalPin): void {
+    export function setVibrationPin(pin: DigitalPin): void {
         Vibration_pin = pin
         pins.setPull(pin, PinPullMode.PullUp)
     }
@@ -1434,7 +1433,7 @@ namespace gunKit {
     //% subcategory=Bullet
     //% weight=91
     //% block="change bullet button is pressed"
-    export function check_bullet_button(): boolean {
+    export function bulletButton(): boolean {
         if (pins.digitalReadPin(bullet_button) == 0) {
             return true
         }
@@ -1445,7 +1444,7 @@ namespace gunKit {
     //% subcategory=Bullet
     //% weight=90
     //% block="Reload bullet button is pressed"
-    export function check_load_button(): boolean {
+    export function loadButton(): boolean {
         if (pins.digitalReadPin(load_button) == 0) {
             return true
         }
@@ -1456,7 +1455,7 @@ namespace gunKit {
     //% subcategory=Bullet
     //% weight=88
     //% block="set bullet type to %type"
-    export function set_bullet_type(type: Bullet_type): void {
+    export function setBulletType(type: BulletType): void {
         bullet_type = type
         basic.pause(200)
     }
@@ -1464,7 +1463,7 @@ namespace gunKit {
     //% subcategory=Team
     //% weight=89
     //% block="change team button is pressed"
-    export function check_team_button(): boolean {
+    export function teamButton(): boolean {
         if (pins.digitalReadPin(team_button) == 0) {
             return true
         }
@@ -1475,16 +1474,16 @@ namespace gunKit {
     //% subcategory=Team
     //% weight=88
     //% block="set team id to %id"
-    export function set_team_id(id: Team_id): void {
+    export function setTeamId(id: TeamId): void {
         team_id = id
         basic.pause(200)
     }
 
     //% subcategory=Fire
     //% weight=79
-    //% block="fire button is pressed"
-    export function check_fire_button(): boolean {
-        if (pins.digitalReadPin(fire_button) == 0) {
+    //% block="openFire button is pressed"
+    export function openFireButton(): boolean {
+        if (pins.digitalReadPin(openFire_button) == 0) {
             return true
         }
         else {
@@ -1498,7 +1497,7 @@ namespace gunKit {
     //% subcategory=Fire
     //% weight=75
     //% block="vibration for %ms"
-    export function set_vibration(ms: number): void {
+    export function vibration(ms: number): void {
         pins.digitalWritePin(Vibration_pin, 1)
         basic.pause(ms)
         pins.digitalWritePin(Vibration_pin, 0)
@@ -1506,7 +1505,7 @@ namespace gunKit {
     //% subcategory=Hit
     //% weight=59
     //% block="Init health variable to %x=variables_get(Health)"
-    export function init_health(x: number): void {
+    export function initHealth(x: number): void {
         //do nothing
     }
 
@@ -1514,13 +1513,13 @@ namespace gunKit {
     //% weight=59
     //% block="on Hit"
     export function onHit(handler: () => void) {
-        init_hit()
+        initHit()
         control.onEvent(EVENT_ID, EVENT_Value, handler);
     }
-    export function init_hit() {
+    export function initHit() {
         control.inBackground(function () {
-            while (conflict_flag) {
-                if (pins.digitalReadPin(recive_pin) == 0) {
+            while (1) {
+                if (pins.digitalReadPin(recive_pin) == 0 && conflict_flag == true) {
                     control.raiseEvent(EVENT_ID, EVENT_Value)
                 }
                 else {
@@ -1532,59 +1531,59 @@ namespace gunKit {
 
     //% subcategory=Fire
     //% weight=78
-    //% block="open fire"
-    export function fire(): void {
+    //% block="openFire"
+    export function openFire(): void {
         conflict_flag == false
         switch (team_id) {
             case 0:
                 if (bullet_type == 0) {
-                    blue_zero()
+                    blueZero()
                 }
                 else if (bullet_type == 1) {
-                    blue_one()
+                    blueOne()
                 }
                 else if (bullet_type == 2) {
-                    blue_two()
+                    blueTwo()
                 }
                 break;
             case 1:
                 if (bullet_type == 0) {
-                    red_zero()
+                    redZero()
                 }
                 else if (bullet_type == 1) {
-                    red_one()
+                    redOne()
                 }
                 else if (bullet_type == 2) {
-                    red_two()
+                    redTwo()
                 }
                 break;
             case 2:
                 if (bullet_type == 0) {
-                    green_zero()
+                    greenZero()
                 }
                 else if (bullet_type == 1) {
-                    green_one()
+                    greenOne()
                 }
                 else if (bullet_type == 2) {
-                    green_two()
+                    greenTwo()
                 }
                 break;
             case 3:
                 if (bullet_type == 0) {
-                    white_zero()
+                    whiteZero()
                 }
                 else if (bullet_type == 1) {
-                    white_one()
+                    whiteOne()
                 }
                 else if (bullet_type == 2) {
-                    white_two()
+                    whiteTwo()
                 }
                 break;
             default:
                 break;
         }
-        basic.pause(50)
         conflict_flag == true
+        basic.pause(500)
     }
 
 }
