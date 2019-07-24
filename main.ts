@@ -17,7 +17,7 @@ namespace gunKit {
     const EVENT_ID = 100
     const EVENT_Value = 200
     let conflict_flag = true
-    
+
     export enum BulletType {
         //% block="Pistol Cartridge" enumval=0
         PistolCartridge,
@@ -806,7 +806,7 @@ namespace gunKit {
         control.waitMicros(330)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function greenOne(){
+    export function greenOne() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -917,7 +917,7 @@ namespace gunKit {
         control.waitMicros(660)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function greenTwo(){
+    export function greenTwo() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1028,7 +1028,7 @@ namespace gunKit {
         control.waitMicros(680)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function whiteZero(){
+    export function whiteZero() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1139,7 +1139,7 @@ namespace gunKit {
         control.waitMicros(700)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function whiteOne(){
+    export function whiteOne() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1250,7 +1250,7 @@ namespace gunKit {
         control.waitMicros(680)
         pins.analogSetPeriod(send_pin, 0)
     }
-    export function whiteTwo(){
+    export function whiteTwo() {
         pins.analogWritePin(send_pin, 512)
         // 头
         pins.analogSetPeriod(send_pin, 26)
@@ -1583,6 +1583,7 @@ namespace gunKit {
                 break;
         }
         conflict_flag == true
+        basic.pause(500)
     }
 
 }
