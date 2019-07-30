@@ -15,7 +15,6 @@ namespace gunKit {
     const EVENT_HIT_ID = 100
     const EVENT_HIT_Value = 200
     let conflict_flag = true
-    initBackground()
     export enum BulletType {
         //% block="Pistol Cartridge" enumval=0
         PistolCartridge,
@@ -1421,6 +1420,7 @@ namespace gunKit {
     //% weight=59
     //% block="on Hit"
     export function onHit(handler: () => void) {
+        initBackground()
         control.onEvent(EVENT_HIT_ID, EVENT_HIT_Value, handler);
     }
 
