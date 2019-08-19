@@ -4,7 +4,7 @@
     "description": "ELECFREAKS Toy Type Education Products",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
         "neoPixel": "github:microsoft/pxt-neopixel"
     },
     "files": [
