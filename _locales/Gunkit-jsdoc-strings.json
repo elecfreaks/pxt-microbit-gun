@@ -1,5 +1,0 @@
-{
-  "gunKit": "Functions to micro:bit Gun by ELECFREAKS Co.,Ltd.",
-  "gunKit.set_vibration": "TODO: Set the time to vibration",
-  "gunKit.set_vibration|param|ms": "vibration time, eg: 200"
-}
