@@ -1,21 +1,28 @@
-# pxt-my-test
+# micro:bit gun kit
 
+This is the toy type educational product produced by ELECFREAKS. It can interact with toys purchased in the market and truly complete learning in play.
 
+This library is designed to drive micro:bit gun kit , You can get this here.
 
-## TODO
+[https://www.elecfreaks.com/estore/micro-bit-gun-kit-with-flying-saucer-and-beetle.html](https://www.elecfreaks.com/estore/micro-bit-gun-kit-with-flying-saucer-and-beetle.html)
 
-- [ ] Add a reference for your blocks here
-- [ ] Add "icon.png" image (300x200) in the root folder
-- [ ] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Turn on your automated build on https://travis-ci.org
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] On GitHub, create a new file named LICENSE. Select the MIT License template.
-- [ ] Get your package reviewed and approved https://makecode.microbit.org/extensions/approval
+## Code Example
+```JavaScript
+gunKit.onHit(function () {
+    basic.showIcon(IconNames.Sad)
+})
+gunKit.setSendPin(AnalogPin.P1)
+gunKit.setRecivePin(DigitalPin.P2)
+gunKit.setFireButton(DigitalPin.P8)
+basic.forever(function () {
+    if (gunKit.openFireButton()) {
+        gunKit.openFire()
+    }
+})
 
-Read more at https://makecode.microbit.org/extensions
-
+```
 ## Supported targets
+for PXT/microbit
 
-* for PXT/microbit
-(The metadata above is needed for package search.)
-
+## License
+MIT

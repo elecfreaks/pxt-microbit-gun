@@ -1,0 +1,20 @@
+{
+  "toyGunKit.BulletTypeList.PistolCartridge|block": "Pistol Cartridge",
+  "toyGunKit.BulletTypeList.RocketGun|block": "Rocket Gun",
+  "toyGunKit.BulletTypeList.TripleTap|block": "Triple Tap",
+  "toyGunKit.TeamIdList.Blue|block": "Blue",
+  "toyGunKit.TeamIdList.Green|block": "Green",
+  "toyGunKit.TeamIdList.Red|block": "Red",
+  "toyGunKit.TeamIdList.White|block": "White",
+  "toyGunKit.onHit|block": "on Hit",
+  "toyGunKit.openFireButton|block": "openFire button is pressed",
+  "toyGunKit.openFire|block": "openFire",
+  "toyGunKit.setBulletType|block": "set bullet type to %type",
+  "toyGunKit.setFireButton|block": "set openFire button to %pin",
+  "toyGunKit.setRecivePin|block": "set IR recive pin to %pin",
+  "toyGunKit.setSendPin|block": "set IR send pin to %pin",
+  "toyGunKit.setTeamId|block": "set team id to %id",
+  "toyGunKit|block": "GunKit",
+  "{id:category}ToyGunKit": "ToyGunKit",
+  "{id:subcategory}Init": "Init"
+}

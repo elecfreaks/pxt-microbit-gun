@@ -1,9 +1,9 @@
 /**
- * Functions to micro:bit Gun by ELECFREAKS Co.,Ltd.
+ * Functions to micro:bit toy Gun by ELECFREAKS Co.,Ltd.
  */
 //% weight=5 color=#000000 icon="\uf1e2" block="GunKit"
 
-namespace gunKit {
+namespace toyGunKit {
 
     let OpenFirePin = DigitalPin.P0
     let TeamId = 0
