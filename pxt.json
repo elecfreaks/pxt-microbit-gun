@@ -1,6 +1,6 @@
 {
     "name": "Toy Gun Kit",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "ELECFREAKS Toy Type Education Products",
     "dependencies": {
         "core": "*",
