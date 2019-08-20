@@ -1,4 +1,4 @@
-# micro:bit gun kit
+# micro:bit toy gun kit
 
 This is the toy type educational product produced by ELECFREAKS. It can interact with toys purchased in the market and truly complete learning in play.
 
@@ -8,17 +8,19 @@ This library is designed to drive micro:bit gun kit , You can get this here.
 
 ## Code Example
 ```JavaScript
-gunKit.onHit(function () {
+toyGunKit.onHit(function () {
     basic.showIcon(IconNames.Sad)
 })
-gunKit.setSendPin(AnalogPin.P1)
-gunKit.setRecivePin(DigitalPin.P2)
-gunKit.setFireButton(DigitalPin.P8)
+toyGunKit.setSendPin(AnalogPin.P1)
+toyGunKit.setRecivePin(DigitalPin.P2)
+toyGunKit.setFireButton(DigitalPin.P8)
 basic.forever(function () {
-    if (gunKit.openFireButton()) {
-        gunKit.openFire()
+    if (toyGunKit.openFireButton()) {
+        music.playTone(988, music.beat(BeatFraction.Sixteenth))
+        toyGunKit.openFire()
     }
 })
+
 
 ```
 ## Supported targets
