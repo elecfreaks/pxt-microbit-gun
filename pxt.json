@@ -5,7 +5,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "neoPixel": "github:microsoft/pxt-neopixel"
+        "neoPixel": "github:elecfreaks/pxt-neopixel"
     },
     "files": [
         "README.md",
