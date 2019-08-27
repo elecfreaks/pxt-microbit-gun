@@ -1,0 +1,19 @@
+{
+  "toyGunKit.BulletTypeList.PistolCartridge|block": "手枪弹",
+  "toyGunKit.BulletTypeList.RocketGun|block": "火箭弹",
+  "toyGunKit.BulletTypeList.TripleTap|block": "三连发",
+  "toyGunKit.TeamIdList.Blue|block": "蓝队",
+  "toyGunKit.TeamIdList.Green|block": "绿队",
+  "toyGunKit.TeamIdList.Red|block": "红队",
+  "toyGunKit.TeamIdList.White|block": "白队",
+  "toyGunKit.onHit|block": "当手枪被击中",
+  "toyGunKit.openFireButton|block": "扳机按钮按下",
+  "toyGunKit.openFire|block": "开火",
+  "toyGunKit.setBulletType|block": "设置子弹类型为 %type",
+  "toyGunKit.setFireButton|block": "设置扳机按钮连接口为 %pin",
+  "toyGunKit.setRecivePin|block": "设置红外接收连接口为 %pin",
+  "toyGunKit.setSendPin|block": "设置红外发射连接口为 %pin",
+  "toyGunKit.setTeamId|block": "设置队伍为 %id",
+  "toyGunKit|block": "玩具手枪",
+  "{id:category}ToyGunKit": "玩具手枪"
+}

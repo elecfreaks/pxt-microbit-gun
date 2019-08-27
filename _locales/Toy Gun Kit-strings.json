@@ -6,15 +6,14 @@
   "toyGunKit.TeamIdList.Green|block": "Green",
   "toyGunKit.TeamIdList.Red|block": "Red",
   "toyGunKit.TeamIdList.White|block": "White",
-  "toyGunKit.onHit|block": "on Hit",
-  "toyGunKit.openFireButton|block": "openFire button is pressed",
+  "toyGunKit.onHit|block": "Gun being hit",
+  "toyGunKit.openFireButton|block": "Trigger button is pressed ",
   "toyGunKit.openFire|block": "openFire",
-  "toyGunKit.setBulletType|block": "set bullet type to %type",
-  "toyGunKit.setFireButton|block": "set openFire button to %pin",
-  "toyGunKit.setRecivePin|block": "set IR recive pin to %pin",
-  "toyGunKit.setSendPin|block": "set IR send pin to %pin",
-  "toyGunKit.setTeamId|block": "set team id to %id",
+  "toyGunKit.setBulletType|block": "Setup bullet type in %type",
+  "toyGunKit.setFireButton|block": "Setup trigger button at pin %pin",
+  "toyGunKit.setRecivePin|block": "Setup IR receiver at pin %pin",
+  "toyGunKit.setSendPin|block": "Setup IR emission at pin %pin",
+  "toyGunKit.setTeamId|block": "Setup team ID in %id",
   "toyGunKit|block": "GunKit",
-  "{id:category}ToyGunKit": "ToyGunKit",
-  "{id:subcategory}Init": "Init"
+  "{id:category}ToyGunKit": "ToyGunKit"
 }
