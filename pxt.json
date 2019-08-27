@@ -1,5 +1,5 @@
 {
-    "name": "Toy Gun Kit",
+    "name": "ToyGunKit",
     "version": "1.0.0",
     "description": "ELECFREAKS Toy Type Education Products",
     "dependencies": {
@@ -9,8 +9,8 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh/Toy Gun Kit-strings.json",
-        "_locales/zh/Toy Gun Kit-jsdoc-strings.json"
+        "_locales/zh/ToyGunKit-strings.json",
+        "_locales/zh/ToyGunKit-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
