@@ -5,11 +5,13 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "neoPixel": "github:elecfreaks/pxt-neopixel"
+        "neopixel": "github:elecfreaks/pxt-neopixel"
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+	"_locales/zh/Toy Gun Kit-strings.json",
+	"_locales/zh/Toy Gun Kit-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
