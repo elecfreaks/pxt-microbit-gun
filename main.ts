@@ -5,11 +5,11 @@
 
 namespace toyGunKit {
 
-    let OpenFirePin = DigitalPin.P0
+    let OpenFirePin = DigitalPin.P8
     let TeamId = 0
     let BulletType = 0
-    let SendPin = AnalogPin.P0
-    let RecivePin = DigitalPin.P0
+    let SendPin = AnalogPin.P1
+    let RecivePin = DigitalPin.P2
     const EVENT_HIT_ID = 100
     const EVENT_HIT_Value = 200
     let ConflictFlag = true
@@ -1369,8 +1369,7 @@ namespace toyGunKit {
     * TODO: Infrared Emission Module Connection Port
     * @param pin describe parameter here, eg: AnalogPin.P1
     */
-    //% block="set IR send pin to %pin"
-    //% subcategory=Init
+    //% block="Setup IR emission at pin %pin"
     //% weight=99
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
@@ -1381,8 +1380,7 @@ namespace toyGunKit {
     * TODO: Infrared Receiving Module Connection Port
     * @param pin describe parameter here, eg: DigitalPin.P2
     */
-    //% block="set IR recive pin to %pin"
-    //% subcategory=Init
+    //% block="Setup IR receiver at pin %pin"
     //% weight=98
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
@@ -1395,8 +1393,7 @@ namespace toyGunKit {
     * TODO: Set up the connection port of the fire button
     * @param pin describe parameter here, eg: DigitalPin.P8
     */
-    //% block="set openFire button to %pin"
-    //% subcategory=Init
+    //% block="Setup trigger button at pin %pin"
     //% weight=96
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.columns=4
@@ -1409,7 +1406,7 @@ namespace toyGunKit {
     * @param type describe parameter here, eg: BulletType.PistolCartridge
     */
     //% weight=88
-    //% block="set bullet type to %type"
+    //% block="Setup bullet type in %type"
     export function setBulletType(type: BulletTypeList): void {
         BulletType = type
         basic.pause(200)
@@ -1419,7 +1416,7 @@ namespace toyGunKit {
     * @param id describe parameter here, eg: TeamId.Blue
     */
     //% weight=88
-    //% block="set team id to %id"
+    //% block="Setup team ID in %id"
     export function setTeamId(id: TeamIdList): void {
         TeamId = id
         basic.pause(200)
@@ -1429,7 +1426,7 @@ namespace toyGunKit {
     * TODO: The fire button is pressed
     */
     //% weight=79
-    //% block="openFire button is pressed"
+    //% block="Trigger button is pressed "
     export function openFireButton(): boolean {
         if (pins.digitalReadPin(OpenFirePin) == 0) {
             return true
@@ -1443,7 +1440,7 @@ namespace toyGunKit {
     * TODO: When the coax receiving module receives data
     */
     //% weight=59
-    //% block="on Hit"
+    //% block="Gun being hit"
     export function onHit(handler: () => void) {
         initBackground()
         control.onEvent(EVENT_HIT_ID, EVENT_HIT_Value, handler);
