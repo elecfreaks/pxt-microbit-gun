@@ -1,0 +1,20 @@
+{
+  "toyGunKit": "Functions to micro:bit toy Gun by ELECFREAKS Co.,Ltd.",
+  "toyGunKit.BulletTypeList": "Types of bullets fired",
+  "toyGunKit.TeamIdList": "Team Number",
+  "toyGunKit.blueOne": "TODO: Infrared Coding of Blue Team Second Seed Bomb Type",
+  "toyGunKit.blueZero": "TODO: Infrared Coding of Blue Team First Seed Bomb Type",
+  "toyGunKit.onHit": "TODO: When the coax receiving module receives data",
+  "toyGunKit.openFire": "TODO: Infrared Coding Based on Team Number and Bullet Type",
+  "toyGunKit.openFireButton": "TODO: The fire button is pressed",
+  "toyGunKit.setBulletType": "TODO: Setting Bullet Type",
+  "toyGunKit.setBulletType|param|type": "describe parameter here, eg: BulletType.PistolCartridge",
+  "toyGunKit.setFireButton": "TODO: Set up the connection port of the fire button",
+  "toyGunKit.setFireButton|param|pin": "describe parameter here, eg: DigitalPin.P8",
+  "toyGunKit.setRecivePin": "TODO: Infrared Receiving Module Connection Port",
+  "toyGunKit.setRecivePin|param|pin": "describe parameter here, eg: DigitalPin.P2",
+  "toyGunKit.setSendPin": "TODO: Infrared Emission Module Connection Port",
+  "toyGunKit.setSendPin|param|pin": "describe parameter here, eg: AnalogPin.P1",
+  "toyGunKit.setTeamId": "TODO: Setting Team ID",
+  "toyGunKit.setTeamId|param|id": "describe parameter here, eg: TeamId.Blue"
+}
