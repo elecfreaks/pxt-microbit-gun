@@ -1451,7 +1451,7 @@ namespace toyGunKit {
             while (1) {
                 if (pins.digitalReadPin(RecivePin) == 0 && ConflictFlag) {
                     control.raiseEvent(EVENT_HIT_ID, EVENT_HIT_Value)
-                    basic.pause(20)
+                    basic.pause(200)
                 }
                 else {
                     basic.pause(20)
